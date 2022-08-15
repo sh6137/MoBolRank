@@ -1,0 +1,315 @@
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+.headline1, .headline2, .subhead1, .subhead2, .subhead3{
+  letter-spacing: -3%;
+  line-height: 140%;
+  font-weight: 700;
+}
+.headline1{font-size: 24px;}
+.headline2{font-size: 20px;}
+.subhead1{font-size: 16px;}
+.subhead2{font-size: 14px;}
+.subhead3{font-size: 12px;}
+.body1, .body2, .caption, .detail{
+  letter-spacing: -3%;
+  line-height: 160%;
+  font-weight: 400;
+}
+.body1{font-size: 16px;}
+.body2{font-size: 14px;}
+.caption{font-size: 12px;}
+.detail{font-size: 10px;}
+
+body{
+  background-color: #121212;
+}
+
+/* 화면 내 콘텐츠 영역 지정 */
+.content_area{
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  min-width: 350px;
+  margin: 0 auto;
+}
+
+/* 상단 topbar 영역 */
+.topbar{
+  position: fixed;
+  width: 100%;
+  height: 74px;
+  max-width: 600px;
+  min-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  z-index: 9;
+}
+.topbar .logo{
+  position: absolute;
+  left: 20px;
+  height: 20px;
+}
+.topbar .i_menu{
+  position: absolute;
+  right: 20px;
+  height: 24px;
+}
+.topbar .i_menu img{
+  width: 24px;
+}
+.gradation{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(#121212 40%, rgba(18, 18, 18, 0));
+  z-index: 7;
+}
+
+/* 영화 리스트 기준 안내 영역 */
+.standard_area{
+  position: fixed;
+  width: 100%;
+  top: 68px;
+  z-index: 8;
+}
+.standard{
+  position: absolute;
+  left: 20px;
+  color: #A5A5A5;
+}
+
+/* 영화 리스트 영역 (랭킹 1위) */
+.mov_list_1::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 320px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  background-image: url(https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.mov_list_1{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 320px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+.country, .genre, .age_limit, .name_kor, .name_eng{
+  color: #ffffff;
+}
+.mov_list_1 .mov_info, .list_normal .mov_info{
+  position: absolute;
+  display: flex;
+  bottom: 80px;
+  margin-left: 20px;
+}
+.mov_list_1 li, .list_normal li{
+  margin-right: 12px;
+}
+.mov_list_1 li::after, .list_normal li::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  bottom: 0;
+  margin: auto 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.mov_list_1 li:last-child::after, .list_normal li:last-child::after{
+  display: none;
+}
+.mov_list_1 .mov_name, .list_normal .mov_name{
+  position: absolute;
+  bottom: 48px;
+  margin-left: 20px;
+}
+.mov_list_1 .name_eng, .list_normal .name_eng{
+  margin-left: 4px;
+}
+
+/* 영화 리스트 영역 (일반) */
+.list_normal{
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  clip-path: polygon(0 24%, 100% 0, 100% 76%, 0% 100%);
+}
+.list_normal:last-child{
+  clip-path: polygon(0 24%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.mov_list_2::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  clip-path: polygon(0 24%, 100% 0, 100% 76%, 0% 100%);
+  background-image: url(https://movie-phinf.pstatic.net/20220720_283/1658284839003UzxoT_JPEG/movie_image.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.mov_list_2{
+  top: 280px;
+}
+
+.mov_list_3::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  clip-path: polygon(0 24%, 100% 0, 100% 76%, 0% 100%);
+  background-image: url(https://movie-phinf.pstatic.net/20111223_274/1324603625649sStr4_JPEG/movie_image.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.mov_list_3{
+  top: 440px;
+  opacity: .4;
+}
+
+.mov_list_4::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  clip-path: polygon(0 24%, 100% 0, 100% 76%, 0% 100%);
+  background-image: url(https://movie-phinf.pstatic.net/20160217_153/1455686083975zjajH_JPEG/movie_image.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.mov_list_4{
+  top: 600px;
+  opacity: .4;
+}
+
+.mov_list_5::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  clip-path: polygon(0 24%, 100% 0, 100% 76%, 0% 100%);
+  background-image: url(https://movie-phinf.pstatic.net/20200120_187/157948230962440pnt_JPEG/movie_image.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.mov_list_5{
+  top: 760px;
+  opacity: .4;
+}
+
+.mov_list_6::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  clip-path: polygon(0 24%, 100% 0, 100% 76%, 0% 100%);
+  background-image: url(https://movie-phinf.pstatic.net/20141124_107/141679124450580TTS_JPEG/movie_image.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.mov_list_6{
+  top: 920px;
+  opacity: .4;
+}
+
+.mov_list_7::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  clip-path: polygon(0 24%, 100% 0, 100% 76%, 0% 100%);
+  background-image: url(https://movie-phinf.pstatic.net/20220725_123/16587120301802EhkX_JPEG/movie_image.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.mov_list_7{
+  top: 1080px;
+  opacity: .4;
+}
+
+.mov_list_8::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  clip-path: polygon(0 24%, 100% 0, 100% 76%, 0% 100%);
+  background-image: url(https://movie-phinf.pstatic.net/20141113_224/1415868769500d1UGq_JPEG/movie_image.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.mov_list_8{
+  top: 1240px;
+  opacity: .4;
+}
+
+.mov_list_9::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  clip-path: polygon(0 24%, 100% 0, 100% 76%, 0% 100%);
+  background-image: url(https://movie-phinf.pstatic.net/20111222_95/1324534697829dzdrz_JPEG/movie_image.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.mov_list_9{
+  top: 1400px;
+  opacity: .4;
+}
+
+.mov_list_10::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  clip-path: polygon(0 24%, 100% 0, 100% 100%, 0% 100%);
+  background-image: url(https://movie-phinf.pstatic.net/20190611_117/1560221190708y3bbv_JPEG/movie_image.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.mov_list_10{
+  top: 1560px;
+  opacity: .4;
+}
