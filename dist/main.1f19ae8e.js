@@ -25139,6 +25139,12 @@ var list7El = document.querySelector('.mov_list_7');
 var list8El = document.querySelector('.mov_list_8');
 var list9El = document.querySelector('.mov_list_9');
 var list10El = document.querySelector('.mov_list_10');
+var listAllExcept1 = document.querySelectorAll('.list_normal');
+var listAllExcept2 = [list1El, list3El, list4El, list5El, list6El, list7El, list8El, list9El, list10El];
+var topbar = document.querySelector('.topbar');
+var standard = document.querySelector('.standard_area');
+var movText = document.querySelectorAll('.mov_info', '.mov_name');
+var gradationBottom = document.querySelector('.gradation_bottom');
 window.addEventListener('scroll', _lodash.default.throttle(function () {
   console.log(window, scrollY);
 }));
@@ -25351,6 +25357,68 @@ window.addEventListener('scroll', _lodash.default.throttle(function () {
     }
   }
 }, 300));
+list1El.addEventListener('click', function () {
+  _gsap.default.to(movText, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(topbar, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(standard, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(listAllExcept1, 0, {
+    display: 'none'
+  });
+
+  list1El.classList.add('active');
+
+  _gsap.default.to(list1El, {
+    height: '400px',
+    top: 0,
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  });
+
+  _gsap.default.to(gradationBottom, .25, {
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  });
+});
+list2El.addEventListener('click', function () {
+  _gsap.default.to(movText, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(topbar, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(standard, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(listAllExcept2, 0, {
+    display: 'none'
+  });
+
+  list2El.classList.add('active');
+
+  _gsap.default.to(list2El, {
+    top: 0,
+    height: '400px',
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  });
+
+  _gsap.default.to(gradationBottom, .25, {
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  });
+});
 },{"lodash":"node_modules/lodash/lodash.js","gsap":"node_modules/gsap/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

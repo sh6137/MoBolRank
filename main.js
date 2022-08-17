@@ -12,6 +12,15 @@ const list8El = document.querySelector('.mov_list_8')
 const list9El = document.querySelector('.mov_list_9')
 const list10El = document.querySelector('.mov_list_10')
 
+const listAllExcept1 = document.querySelectorAll('.list_normal')
+const listAllExcept2 = [list1El, list3El, list4El, list5El, list6El, list7El, list8El, list9El, list10El]
+
+const topbar = document.querySelector('.topbar')
+const standard = document.querySelector('.standard_area')
+const movText = document.querySelectorAll('.mov_info', '.mov_name')
+
+const gradationBottom = document.querySelector('.gradation_bottom')
+
 window.addEventListener('scroll', _.throttle(function () {
   console.log(window,scrollY);
 }))
@@ -190,3 +199,39 @@ window.addEventListener('scroll', _.throttle(function () {
     }
   }
 }, 300))
+
+list1El.addEventListener('click', function(){
+  gsap.to(movText, 0, {display: 'none'})
+  gsap.to(topbar, 0, {display: 'none'})
+  gsap.to(standard, 0, {display: 'none'})
+  gsap.to(listAllExcept1, 0, {display: 'none'})
+  list1El.classList.add('active')
+  gsap.to(list1El, {
+    height: '400px',
+    top: 0,
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  })
+  gsap.to(gradationBottom, .25, {
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  })
+  })
+
+list2El.addEventListener('click', function(){
+  gsap.to(movText, 0, {display: 'none'})
+  gsap.to(topbar, 0, {display: 'none'})
+  gsap.to(standard, 0, {display: 'none'})
+  gsap.to(listAllExcept2, 0, {display: 'none'})
+  list2El.classList.add('active')
+  gsap.to(list2El, {
+    top: 0,
+    height: '400px',
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  })
+  gsap.to(gradationBottom, .25, {
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  })
+})
