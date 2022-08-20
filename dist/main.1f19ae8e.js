@@ -25462,15 +25462,14 @@ list1El.addEventListener('click', function () {
 
   list1El.classList.add('active');
 
-  _gsap.default.to(list1El, {
+  _gsap.default.to(list1El, .7, {
     height: '400px',
     top: 0,
-    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)',
-    opacity: '1'
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
   });
 
   _gsap.default.to(gradationBottom, .25, {
-    delay: .3,
+    delay: .5,
     display: 'block',
     opacity: '1'
   });
@@ -25494,15 +25493,14 @@ list2El.addEventListener('click', function () {
 
   list2El.classList.add('active');
 
-  _gsap.default.to(list2El, {
+  _gsap.default.to(list2El, .7, {
     top: 0,
     height: '400px',
-    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)',
-    opacity: '1'
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
   });
 
   _gsap.default.to(gradationBottom, .25, {
-    delay: .3,
+    delay: .5,
     display: 'block',
     opacity: '1'
   });
@@ -25526,14 +25524,231 @@ list3El.addEventListener('click', function () {
 
   list3El.classList.add('active');
 
-  _gsap.default.to(list3El, {
+  _gsap.default.to(list3El, .7, {
     top: 0,
     height: '400px',
     clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
   });
 
   _gsap.default.to(gradationBottom, .25, {
-    delay: .3,
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  });
+});
+list4El.addEventListener('click', function () {
+  _gsap.default.to(movText, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(topbar, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(standard, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(listAllExcept4, 0, {
+    display: 'none'
+  });
+
+  list4El.classList.add('active');
+
+  _gsap.default.to(list4El, .7, {
+    top: 0,
+    height: '400px',
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  });
+
+  _gsap.default.to(gradationBottom, .25, {
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  });
+});
+list5El.addEventListener('click', function () {
+  _gsap.default.to(movText, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(topbar, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(standard, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(listAllExcept5, 0, {
+    display: 'none'
+  });
+
+  list5El.classList.add('active');
+
+  _gsap.default.to(list5El, .7, {
+    top: 0,
+    height: '400px',
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  });
+
+  _gsap.default.to(gradationBottom, .25, {
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  });
+});
+list6El.addEventListener('click', function () {
+  _gsap.default.to(movText, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(topbar, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(standard, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(listAllExcept6, 0, {
+    display: 'none'
+  });
+
+  list6El.classList.add('active');
+
+  _gsap.default.to(list6El, .7, {
+    top: 0,
+    height: '400px',
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  });
+
+  _gsap.default.to(gradationBottom, .25, {
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  });
+});
+list7El.addEventListener('click', function () {
+  _gsap.default.to(movText, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(topbar, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(standard, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(listAllExcept7, 0, {
+    display: 'none'
+  });
+
+  list7El.classList.add('active');
+
+  _gsap.default.to(list7El, .7, {
+    top: 0,
+    height: '400px',
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  });
+
+  _gsap.default.to(gradationBottom, .25, {
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  });
+});
+list8El.addEventListener('click', function () {
+  _gsap.default.to(movText, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(topbar, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(standard, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(listAllExcept8, 0, {
+    display: 'none'
+  });
+
+  list8El.classList.add('active');
+
+  _gsap.default.to(list8El, .7, {
+    top: 0,
+    height: '400px',
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  });
+
+  _gsap.default.to(gradationBottom, .25, {
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  });
+});
+list9El.addEventListener('click', function () {
+  _gsap.default.to(movText, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(topbar, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(standard, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(listAllExcept9, 0, {
+    display: 'none'
+  });
+
+  list9El.classList.add('active');
+
+  _gsap.default.to(list9El, .7, {
+    top: 0,
+    height: '400px',
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  });
+
+  _gsap.default.to(gradationBottom, .25, {
+    delay: .5,
+    display: 'block',
+    opacity: '1'
+  });
+});
+list10El.addEventListener('click', function () {
+  _gsap.default.to(movText, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(topbar, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(standard, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(listAllExcept10, 0, {
+    display: 'none'
+  });
+
+  list10El.classList.add('active');
+
+  _gsap.default.to(list10El, .7, {
+    top: 0,
+    height: '400px',
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  });
+
+  _gsap.default.to(gradationBottom, .25, {
+    delay: .5,
     display: 'block',
     opacity: '1'
   });
