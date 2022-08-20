@@ -25127,6 +25127,8 @@ var _lodash = _interopRequireDefault(require("lodash"));
 
 var _gsap = _interopRequireDefault(require("gsap"));
 
+var _gsapCore = _interopRequireDefault(require("gsap/gsap-core"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var list1El = document.querySelector('.mov_list_1');
@@ -25141,217 +25143,301 @@ var list9El = document.querySelector('.mov_list_9');
 var list10El = document.querySelector('.mov_list_10');
 var listAllExcept1 = document.querySelectorAll('.list_normal');
 var listAllExcept2 = [list1El, list3El, list4El, list5El, list6El, list7El, list8El, list9El, list10El];
+var listAllExcept3 = [list1El, list2El, list4El, list5El, list6El, list7El, list8El, list9El, list10El];
+var listAllExcept4 = [list1El, list2El, list3El, list5El, list6El, list7El, list8El, list9El, list10El];
+var listAllExcept5 = [list1El, list2El, list3El, list4El, list6El, list7El, list8El, list9El, list10El];
+var listAllExcept6 = [list1El, list2El, list3El, list4El, list5El, list7El, list8El, list9El, list10El];
+var listAllExcept7 = [list1El, list2El, list3El, list4El, list5El, list6El, list8El, list9El, list10El];
+var listAllExcept8 = [list1El, list2El, list3El, list4El, list5El, list6El, list7El, list9El, list10El];
+var listAllExcept9 = [list1El, list2El, list3El, list4El, list5El, list6El, list7El, list8El, list10El];
+var listAllExcept10 = [list1El, list2El, list3El, list4El, list5El, list6El, list7El, list8El, list9El];
 var topbar = document.querySelector('.topbar');
 var standard = document.querySelector('.standard_area');
 var movText = document.querySelectorAll('.mov_info', '.mov_name');
 var gradationBottom = document.querySelector('.gradation_bottom');
 window.addEventListener('scroll', _lodash.default.throttle(function () {
   console.log(window, scrollY);
-}));
+}, 300));
 window.addEventListener('scroll', _lodash.default.throttle(function () {
-  if (window, scrollY >= 60) {
-    _gsap.default.to(list1El, .5, {
-      opacity: '.4'
-    });
-
-    _gsap.default.to(list3El, .5, {
-      opacity: '1'
-    });
-  } else {
-    _gsap.default.to(list3El, .5, {
-      opacity: '.4'
-    });
-
-    _gsap.default.to(list1El, .5, {
-      opacity: '1'
-    });
-  }
-
-  if (window, scrollY >= 200) {
-    _gsap.default.to(list2El, .5, {
-      opacity: '.4'
-    });
-
-    _gsap.default.to(list4El, .5, {
-      opacity: '1'
-    });
-  } else {
-    _gsap.default.to(list4El, .5, {
-      opacity: '.4'
-    });
-
-    _gsap.default.to(list2El, .5, {
-      opacity: '1'
-    });
-  }
-
-  if (window, scrollY >= 440) {
-    _gsap.default.to(list3El, .5, {
-      opacity: '.4'
-    });
-
-    _gsap.default.to(list5El, .5, {
-      opacity: '1'
-    });
-  } else {
-    _gsap.default.to(list5El, .5, {
-      opacity: '.4'
-    });
-  }
-
   if (matchMedia("screen and (max-height: 850px)").matches) {
-    if (window, scrollY >= 580) {
-      _gsap.default.to(list4El, .5, {
-        opacity: '.4'
-      });
-
-      _gsap.default.to(list6El, .5, {
+    if (window, scrollY < 150) {
+      _gsap.default.to(list1El, {
         opacity: '1'
       });
     } else {
-      _gsap.default.to(list6El, .5, {
+      _gsap.default.to(list1El, {
         opacity: '.4'
       });
     }
 
-    if (window, scrollY >= 720) {
-      _gsap.default.to(list5El, .5, {
-        opacity: '.4'
-      });
-
-      _gsap.default.to(list7El, .5, {
+    if (window, scrollY < 220) {
+      _gsap.default.to(list2El, {
         opacity: '1'
       });
     } else {
-      _gsap.default.to(list7El, .5, {
+      _gsap.default.to(list2El, {
         opacity: '.4'
       });
     }
 
-    if (window, scrollY >= 860) {
-      _gsap.default.to(list6El, .5, {
-        opacity: '.4'
-      });
-
-      _gsap.default.to(list8El, .5, {
-        opacity: '1'
-      });
-
-      _gsap.default.to(list9El, .5, {
-        opacity: '1'
-      });
-
-      _gsap.default.to(list10El, .5, {
+    if (window, 150 <= scrollY && scrollY < 370) {
+      _gsap.default.to(list3El, {
         opacity: '1'
       });
     } else {
-      _gsap.default.to(list8El, .5, {
+      _gsap.default.to(list3El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 220 <= scrollY && scrollY < 535) {
+      _gsap.default.to(list4El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list4El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 370 <= scrollY && scrollY < 700) {
+      _gsap.default.to(list5El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list5El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 535 <= scrollY && scrollY < 850) {
+      _gsap.default.to(list6El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list6El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 700 <= scrollY) {
+      _gsap.default.to(list7El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list8El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list9El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list10El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list7El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, scrollY < 850) {
+      _gsap.default.to(list8El, {
         opacity: '.4'
       });
 
-      _gsap.default.to(list9El, .5, {
+      _gsap.default.to(list9El, {
         opacity: '.4'
       });
 
-      _gsap.default.to(list10El, .5, {
+      _gsap.default.to(list10El, {
         opacity: '.4'
       });
     }
   } else if (matchMedia("screen and (max-height: 1000px)").matches) {
-    if (window, scrollY >= 580) {
-      _gsap.default.to(list4El, .5, {
-        opacity: '.4'
-      });
-
-      _gsap.default.to(list6El, .5, {
+    if (window, scrollY < 80) {
+      _gsap.default.to(list1El, {
         opacity: '1'
       });
     } else {
-      _gsap.default.to(list6El, .5, {
+      _gsap.default.to(list1El, {
         opacity: '.4'
       });
     }
 
-    if (window, scrollY >= 840) {
-      _gsap.default.to(list5El, .5, {
-        opacity: '.4'
-      });
-
-      _gsap.default.to(list7El, .5, {
-        opacity: '1'
-      });
-
-      _gsap.default.to(list8El, .5, {
-        opacity: '1'
-      });
-
-      _gsap.default.to(list9El, .5, {
-        opacity: '1'
-      });
-
-      _gsap.default.to(list10El, .5, {
+    if (window, scrollY < 230) {
+      _gsap.default.to(list2El, {
         opacity: '1'
       });
     } else {
-      _gsap.default.to(list7El, .5, {
+      _gsap.default.to(list2El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 80 <= scrollY && scrollY < 350) {
+      _gsap.default.to(list3El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list3El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 230 <= scrollY && scrollY < 530) {
+      _gsap.default.to(list4El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list4El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 350 <= scrollY && scrollY < 700) {
+      _gsap.default.to(list5El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list5El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 530 <= scrollY) {
+      _gsap.default.to(list6El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list7El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list8El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list9El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list10El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list6El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, scrollY < 700) {
+      _gsap.default.to(list7El, {
         opacity: '.4'
       });
 
-      _gsap.default.to(list8El, .5, {
+      _gsap.default.to(list8El, {
         opacity: '.4'
       });
 
-      _gsap.default.to(list9El, .5, {
+      _gsap.default.to(list9El, {
         opacity: '.4'
       });
 
-      _gsap.default.to(list10El, .5, {
+      _gsap.default.to(list10El, {
         opacity: '.4'
       });
     }
   } else {
-    if (window, scrollY >= 550) {
-      _gsap.default.to(list4El, .5, {
-        opacity: '.4'
-      });
-
-      _gsap.default.to(list6El, .5, {
-        opacity: '1'
-      });
-
-      _gsap.default.to(list7El, .5, {
-        opacity: '1'
-      });
-
-      _gsap.default.to(list8El, .5, {
-        opacity: '1'
-      });
-
-      _gsap.default.to(list9El, .5, {
-        opacity: '1'
-      });
-
-      _gsap.default.to(list10El, .5, {
+    if (window, scrollY < 130) {
+      _gsap.default.to(list1El, {
         opacity: '1'
       });
     } else {
-      _gsap.default.to(list6El, .5, {
+      _gsap.default.to(list1El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, scrollY < 235) {
+      _gsap.default.to(list2El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list2El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 130 <= scrollY && scrollY < 380) {
+      _gsap.default.to(list3El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list3El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 235 <= scrollY && scrollY < 545) {
+      _gsap.default.to(list4El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list4El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, 380 <= scrollY) {
+      _gsap.default.to(list5El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list6El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list7El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list8El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list9El, {
+        opacity: '1'
+      });
+
+      _gsap.default.to(list10El, {
+        opacity: '1'
+      });
+    } else {
+      _gsap.default.to(list5El, {
+        opacity: '.4'
+      });
+    }
+
+    if (window, scrollY < 545) {
+      _gsap.default.to(list6El, {
         opacity: '.4'
       });
 
-      _gsap.default.to(list7El, .5, {
+      _gsap.default.to(list7El, {
         opacity: '.4'
       });
 
-      _gsap.default.to(list8El, .5, {
+      _gsap.default.to(list8El, {
         opacity: '.4'
       });
 
-      _gsap.default.to(list9El, .5, {
+      _gsap.default.to(list9El, {
         opacity: '.4'
       });
 
-      _gsap.default.to(list10El, .5, {
+      _gsap.default.to(list10El, {
         opacity: '.4'
       });
     }
@@ -25379,11 +25465,12 @@ list1El.addEventListener('click', function () {
   _gsap.default.to(list1El, {
     height: '400px',
     top: 0,
-    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)',
+    opacity: '1'
   });
 
   _gsap.default.to(gradationBottom, .25, {
-    delay: .5,
+    delay: .3,
     display: 'block',
     opacity: '1'
   });
@@ -25410,16 +25497,48 @@ list2El.addEventListener('click', function () {
   _gsap.default.to(list2El, {
     top: 0,
     height: '400px',
-    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)',
+    opacity: '1'
   });
 
   _gsap.default.to(gradationBottom, .25, {
-    delay: .5,
+    delay: .3,
     display: 'block',
     opacity: '1'
   });
 });
-},{"lodash":"node_modules/lodash/lodash.js","gsap":"node_modules/gsap/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+list3El.addEventListener('click', function () {
+  _gsap.default.to(movText, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(topbar, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(standard, 0, {
+    display: 'none'
+  });
+
+  _gsap.default.to(listAllExcept3, 0, {
+    display: 'none'
+  });
+
+  list3El.classList.add('active');
+
+  _gsap.default.to(list3El, {
+    top: 0,
+    height: '400px',
+    clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 80%)'
+  });
+
+  _gsap.default.to(gradationBottom, .25, {
+    delay: .3,
+    display: 'block',
+    opacity: '1'
+  });
+});
+},{"lodash":"node_modules/lodash/lodash.js","gsap":"node_modules/gsap/index.js","gsap/gsap-core":"node_modules/gsap/gsap-core.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
