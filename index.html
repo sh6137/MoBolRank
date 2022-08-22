@@ -8,7 +8,33 @@
   <link rel="stylesheet" href="./main.css">
   <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <script defer src="./main.js"></script>
+
+  <script defer src="./js/main.js"></script>
+  <script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    // after the API code downloads.
+
+    function onYouTubeIframeAPIReady() {
+    // <div id="player"></div>
+    new YT.Player('player', {
+      videoId: 'jBdRhhSt3Bc',
+      playerVars: {
+        rel: 0, 
+        controls: 0, 
+        playsinline : 1,
+        showinfo: 0,
+        modestbranding: 0
+      }
+    });
+    }
+  </script>
 </head>
 <body>
   <div class="content_area">
@@ -151,17 +177,17 @@
 
   <!-- 영화 상세 페이지 영역 -->
   <div class="gradation_bottom"></div>
-
   <div class="content_area mov_list_1_detail detail_page">
-    <!-- 상세 - 상단 바 -->
-    <div class="topbar">
-      <a class="i_back" href="javascript:void(0)">
-        <img src="./img/icon_back_white.png" alt="icon">
-      </a>
-      <a class="i_share" href="javascript:void(0)">
-        <img src="./img/icon_share_white.png" alt="icon">
-      </a>
-    </div>
+
+  <!-- 상세 - 상단 바 -->
+  <div class="topbar">
+    <a class="i_back" href="javascript:void(0)">
+      <img src="./img/icon_back_white.png" alt="icon">
+    </a>
+    <a class="i_share" href="javascript:void(0)">
+      <img src="./img/icon_share_white.png" alt="icon">
+    </a>
+  </div>
   
   <!-- 상세 - 정보 -->
   <div class="detail_page_container">
@@ -219,8 +245,17 @@
     <div class="summary_text body2">전원백수로 살 길 막막하지만 사이는 좋은 기택(송강호) 가족. 장남 기우(최우식)에게 명문대생 친구가 연결시켜 준 고액 과외 자리는 모처럼 싹튼 고정수입의 희망이다. 온 가족의 도움과 기대 속에 박사장(이선균) 집으로 향하는 기우.</div>
   </div>
 
+  <!-- 상세 - 정보 - 영화 예고편 -->
+  <div class="trailer">
+    <div class="title body2">영화 예고편</div>
+    <section class="youtube">
+      <div class="youtube_area">
+          <div id="player"></div>
+      </div>
+    </section>
+  </div>
 
-
+  
 
   </div>
   </div>
