@@ -30,6 +30,9 @@ const movText = document.querySelectorAll('.mov_info', '.mov_name')
 
 const gradationBottom = document.querySelector('.gradation_bottom')
 
+const list1El_detail = document.querySelector('.mov_list_1_detail')
+
+
 window.addEventListener('scroll', _.throttle(function () {
   console.log(window,scrollY);
 }, 300))
@@ -178,6 +181,10 @@ list1El.addEventListener('click', function(){
     delay: .5,
     display: 'block',
     opacity: '1'
+  })
+  gsap.to(list1El_detail, {
+    delay: '1.1',
+    display: 'block'
   })
 })
 list2El.addEventListener('click', function(){
@@ -333,3 +340,4 @@ list10El.addEventListener('click', function(){
     opacity: '1'
   })
 })
+

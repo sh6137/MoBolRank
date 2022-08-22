@@ -3,6 +3,7 @@
   text-decoration: none;
   outline: none;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #ffffff;
 }
 .headline1, .headline2, .subhead1, .subhead2, .subhead3{
   letter-spacing: -3%;
@@ -109,19 +110,16 @@ body{
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
   cursor: pointer;
 }
-.country, .genre, .age_limit, .name_kor, .name_eng{
-  color: #ffffff;
-}
-.mov_list_1 .mov_info, .list_normal .mov_info{
+.mov_info{
   position: absolute;
   display: flex;
   bottom: 80px;
   margin-left: 20px;
 }
-.mov_list_1 li, .list_normal li{
+.mov_info li {
   margin-right: 12px;
 }
-.mov_list_1 li::after, .list_normal li::after{
+.mov_info li::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -132,7 +130,7 @@ body{
   border-radius: 50%;
   background-color: #ffffff;
 }
-.mov_list_1 li:last-child::after, .list_normal li:last-child::after{
+.mov_info li:last-child::after{
   display: none;
 }
 .mov_list_1 .mov_name, .list_normal .mov_name{
@@ -317,7 +315,7 @@ body{
   opacity: .4;
 }
 
-/* 영화 세부 페이지 영역 */
+/* 영화 상세 페이지 영역 */
 .active::before{
   top: 0;
   height: 400px;
@@ -337,3 +335,117 @@ body{
   display: none;
   opacity: 0;
 }
+.detail_page{
+  display: none;
+  z-index: 19;
+}
+
+/* 상세 - 상단 바 */
+.topbar .i_back{
+  position: absolute;
+  left: 20px;
+  height: 24px;
+}
+.topbar .i_back img{
+  height: 24px;
+}
+.topbar .i_share{
+  position: absolute;
+  right: 20px;
+  height: 24px;
+}
+.topbar .i_share img{
+  height: 24px;
+}
+
+/* 상세 - 정보 */
+.detail_page_container{
+  position: absolute;
+  width: 100%;
+  margin: 340px auto 0;
+  padding: 0 20px;
+}
+.detail_page .title{
+  color: #A5A5A5;
+  margin-bottom: 8px;
+}
+
+/* 상세 - 정보 - 영화 요약 텍스트 */
+.detail_page .mov_info_detail{
+  position: relative;
+  display: flex;
+}
+.detail_page .mov_info_detail li{
+  margin-right: 12px;
+}
+.detail_page .mov_info_detail li::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  bottom: 0;
+  margin: auto 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.detail_page .mov_info_detail li:last-child::after{
+  display: none;
+}
+
+/* 상세 - 정보 - 영화 제목 */
+.detail_page .mov_name_detail{
+  position: relative;
+  margin-top: 8px;
+}
+.detail_page .mov_name_detail .name_eng_deatil{
+  margin-left: 4px;
+  color: #A5A5A5;
+}
+
+/* 상세 - 정보 - 영화 상영 관련 */
+.detail_page .screening_info{
+  width: 100%;
+  margin-top: 28px;
+  display: flex;
+}
+.detail_page .screening_info .opening_date{
+  flex-grow: 3.5;
+  flex-basis: 0;
+}
+.detail_page .screening_info .grade{
+  flex-grow: 3;
+  flex-basis: 0;
+}
+.detail_page .screening_info .grade_value{
+  position: relative;
+  display: flex;
+}
+.detail_page .screening_info .grade_value .grade_number{
+  margin-right: 6px;
+}
+.detail_page .screening_info .grade_star .star_background{
+  position: absolute;
+  display: flex;
+}
+.detail_page .screening_info .grade_star .star_fill{
+  position: absolute;
+  display: flex;
+  width: 54px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.detail_page .screening_info .grade_value span{
+  padding: 1px;
+  color: #FFE04B;
+}
+.detail_page .screening_info .cumulative_audience{
+  flex-grow: 2;
+  flex-basis: 0;
+}
+
+/* 상세 - 정보 - 영화 줄거리 */
+.detail_page .summary{
+  margin-top: 40px;
+}
+
