@@ -456,30 +456,62 @@ body{
 .detail_page .trailer{
   margin-top: 40px;
 }
-.youtube {
+.detail_page .trailer .youtube {
 margin-top: 10px;
 position: relative;
 padding-top: 56.25%;
 }
-.youtube .youtube_area {
+.detail_page .trailer .youtube .youtube_area {
 position: absolute;
 top: 0;
 left: 0;
 width: 100%;
 }
-.youtube .youtube_area::before {
+.detail_page .trailer .youtube .youtube_area::before {
 content: "";
 display: block;
 width: 100%;
 height: 0;
 padding-top: 56.25%;
 }
-#player {
+.detail_page .trailer #player {
 position: absolute;
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
+}
+
+/* 상세 - 정보 - 감독 및 출연진 */
+.detail_page .supervisor{
+  margin-top: 40px;
+}
+.detail_page .supervisor .people_area{
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.detail_page .supervisor .people_area::-webkit-scrollbar{
+  display: none;
+}
+.detail_page .supervisor .people_list{
+  margin-right: 20px;
+}
+.detail_page .supervisor .people_list img{
+  width: 66px;
+  height: 66px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+.detail_page .supervisor .people_list .director_name {
+  text-align: center;
+}
+.detail_page .supervisor .people_list .actor_name {
+  text-align: center;
 }
 
 /*# sourceMappingURL=/main.af46ece4.css.map */
