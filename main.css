@@ -150,9 +150,6 @@ body{
   clip-path: polygon(0 24%, 100% 0, 100% 76%, 0% 100%);
   cursor: pointer;
 }
-.list_normal:last-child{
-  clip-path: polygon(0 24%, 100% 0, 100% 100%, 0% 100%);
-}
 
 .mov_list_2::before{
   content: "";
@@ -313,6 +310,7 @@ body{
 .mov_list_10{
   top: 1560px;
   opacity: .4;
+  clip-path: polygon(0 24%, 100% 0, 100% 100%, 0% 100%);
 }
 
 /* 영화 상세 페이지 영역 */
